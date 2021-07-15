@@ -1,5 +1,6 @@
 package com.example.firstkotlinapp.Fragments.add
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextUtils
@@ -10,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.example.firstkotlinapp.LoginActivity
 import com.example.firstkotlinapp.R
 import com.example.firstkotlinapp.data.User
 import com.example.firstkotlinapp.data.UserViewModel
@@ -47,7 +49,8 @@ class AddFragment : Fragment() {
             //add User
             mUserViewModel.addUser(user)
             Toast.makeText(requireContext(), "Successfully Added", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.action_addFragment_to_listFragment)
+            startActivity(Intent(requireContext(), LoginActivity::class.java))
+            //findNavController().navigate(R.id.action_addFragment_to_listFragment)
         }else{
             Toast.makeText(requireContext(), "Please fill in all the fields", Toast.LENGTH_SHORT).show()
 

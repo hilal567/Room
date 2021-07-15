@@ -27,7 +27,6 @@ class ListFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_list, container, false)
 
-
         //place the recycler view here
         val adapter = ListAdapter()
         val recyclerView = view.usersRecycler

@@ -9,5 +9,10 @@ data class User(
     val id:Int,
     val firstName:String,
     val lastName : String,
-    val age : Int
+    val password : Int
+
+    // id    firstName   LastName  password
+    //  1    fatma       ali       23
+    //  2    joram       lastnam   18
+    //  3    gad           last    13
 )
